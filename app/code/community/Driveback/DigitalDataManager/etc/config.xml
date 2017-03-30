@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Driveback_DigitalDataManager>
+            <version>0.0.1</version>
+        </Driveback_DigitalDataManager>
+    </modules>
+
+    <global>
+        <models>
+            <driveback_ddm>
+                <class>Driveback_DigitalDataManager_Model</class>
+            </driveback_ddm>
+        </models>
+        <helpers>
+            <driveback_ddm>
+                <class>Driveback_DigitalDataManager_Helper</class>
+            </driveback_ddm>
+        </helpers>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <driveback_digital_data_manager>
+                    <file>driveback/ddm.xml</file>
+                </driveback_digital_data_manager>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Driveback_DigitalDataManager>
+                    <files>
+                        <default>Driveback_DigitalDataManager.csv</default>
+                    </files>
+                </Driveback_DigitalDataManager>
+            </modules>
+        </translate>
+        <events>
+            <controller_action_layout_render_before>
+                <observers>
+                    <driveback_ddm_process_listing_data>
+                        <class>driveback_ddm/observer</class>
+                        <method>processListingData</method>
+                    </driveback_ddm_process_listing_data>
+                </observers>
+            </controller_action_layout_render_before>
+        </events>
+    </frontend>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <Driveback_DigitalDataManager>
+                    <files>
+                        <default>Driveback_DigitalDataManager.csv</default>
+                    </files>
+                </Driveback_DigitalDataManager>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <driveback_ddm>
+            <settings>
+                <enabled>1</enabled>
+            </settings>
+        </driveback_ddm>
+    </default>
+</config>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <driveback_ddm translate="title" module="driveback_ddm">
+                                        <sort_order>1000</sort_order>
+                                        <title>Manage Digital Data Layer</title>
+                                    </driveback_ddm>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
